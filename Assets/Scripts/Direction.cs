@@ -2,12 +2,12 @@
 
 public class Direction : MonoBehaviour{
     // Fields
-	private int directionAngle;
+	private int angle;
 
     // Properties
-    public int GetDirectionAngle
+    public int GetAngle
     {
-        get { return directionAngle; }
+        get { return angle; }
     }
 
     // Methods
@@ -21,6 +21,6 @@ public class Direction : MonoBehaviour{
         float verticalCursorDistance = Input.mousePosition.y - (Screen.height / 2);
         float radian = Mathf.Atan2(verticalCursorDistance, horizontalCursorDistance);
         float degree = radian * Mathf.Rad2Deg;
-        directionAngle = Mathf.FloorToInt(degree);
+        angle = Mathf.FloorToInt(degree);
     }
 }

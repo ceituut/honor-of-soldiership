@@ -45,7 +45,7 @@ public class SoldierSprite : MonoBehaviour {
 	}
 
 	void Update () {
-		ChangeSprite(direction.GetDirectionAngle);
+		ChangeSprite(direction.GetAngle);
 	}
 
 	void ChangeSprite(int directionAngle)
