@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour {
 
 	void LateUpdate()
 	{
-		animateLegs.WalkAnimationSpeed += 0.2f;
+		animateLegs.WalkAnimationSpeed += 0.01f;
 		animateLegs.Animate(moveVector , legsAnimator , direction);
 	}
 }

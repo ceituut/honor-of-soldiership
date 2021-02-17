@@ -6,7 +6,7 @@ using UnityEngine.U2D;
 public class SoldierSprite : MonoBehaviour {
     // Fields
 	[SerializeField] private Direction direction;
-	[SerializeField] public SpriteAtlas spriteAtlas; ///////////////// in game magager
+    [SerializeField] private SpriteManager spriteManager;
 	[SerializeField] private SpriteRenderer headSpriteRenderer;
 	[SerializeField] private SpriteRenderer bodySpriteRenderer;
 	[SerializeField] private SpriteRenderer legsSpriteRenderer;
@@ -30,6 +30,11 @@ public class SoldierSprite : MonoBehaviour {
     {
         get { return legsSpriteRenderer; }
         set { legsSpriteRenderer = value;}
+    }
+
+    public SpriteManager GetSpriteManager
+    {
+        get { return spriteManager; }
     }
 
     // Methods

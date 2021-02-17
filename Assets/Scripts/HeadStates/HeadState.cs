@@ -16,7 +16,7 @@ public abstract class HeadState
     {
         headSpriteList = new Sprite[endIndexOfSprites - startIndexOfSprites + 1];
         for(int spriteIndex = startIndexOfSprites; spriteIndex <= endIndexOfSprites; spriteIndex++)
-            headSpriteList[spriteIndex - 1] = soldierSprite.spriteAtlas.GetSprite(StateName + spriteIndex);
+            headSpriteList[spriteIndex - 1] = SpriteManager.Instance.spriteAtlas.GetSprite(StateName + spriteIndex);
     }
     public void ChangeSprite(int directionAngle , SoldierSprite soldierSprite)
     {
