@@ -282,8 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {fileID: 114553348478138690}
-  spriteAtlas: {fileID: 4343727234628468602, guid: ff853bc9460434a41941a8414cf78f76,
-    type: 2}
+  spriteManager: {fileID: 0}
   headSpriteRenderer: {fileID: 212254509536775684}
   bodySpriteRenderer: {fileID: 212625478220907980}
   legsSpriteRenderer: {fileID: 212730423546870582}

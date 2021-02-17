@@ -2,7 +2,7 @@
 
 public class AnimateLegs {
 	// Fields
-	private bool isMoving , isUpMoving , isDownMoving , isRightMoving , isLeftMoving , isDirectionUp , isDirectionDown , isDirectionRight , isDirectionLeft;
+	private bool isUpMoving , isDownMoving , isRightMoving , isLeftMoving , isDirectionUp , isDirectionDown , isDirectionRight , isDirectionLeft;
 	private float walkAnimationSpeed;
 
 	// Properties
@@ -23,9 +23,12 @@ public class AnimateLegs {
 	}
 	
     // Methods
-	void SetConditions(Vector2 moveVector , Direction direction)
+	bool isMoving(Vector2 moveVector)
 	{
-		isMoving = moveVector.normalized.magnitude != 0;
+		return moveVector.normalized.magnitude != 0;
+	}
+	void SetMovingAndDirectionConditions(Vector2 moveVector , Direction direction)
+	{
 		isUpMoving = moveVector.y > 0 && moveVector.x == 0;
 		isDownMoving = moveVector.y < 0 && moveVector.x == 0;
 		isRightMoving = moveVector.y == 0 && moveVector.x > 0;
@@ -37,41 +40,49 @@ public class AnimateLegs {
 	}
 	public void Animate(Vector2 moveVector , Animator legsAnimator , Direction direction)
 	{
-		if(isMoving)
-		{
-			legsAnimator.enabled = true;
-			SetConditions(moveVector , direction);
-			if(isUpMoving && isDirectionUp)
-				PlayLegsAnimation(legsAnimator , "OnWalkBack" , true);
-			else if(isUpMoving && isDirectionDown)
-				PlayLegsAnimation(legsAnimator , "OnWalkFront" , false);
-			else if(isDownMoving && isDirectionUp)
-				PlayLegsAnimation(legsAnimator , "OnWalkBack" , false);
-			else if(isDownMoving && isDirectionDown)
-				PlayLegsAnimation(legsAnimator , "OnWalkFront" , true); ////////// horizontal :
-			else if(isRightMoving && isDirectionRight)
-				PlayLegsAnimation(legsAnimator , "OnWalkRight" , true);
-			else if(isRightMoving && isDirectionLeft)
-				PlayLegsAnimation(legsAnimator , "OnWalkLeft" , false);
-			else if(isLeftMoving && isDirectionRight)
-				PlayLegsAnimation(legsAnimator , "OnWalkRight" , false);
-			else if(isLeftMoving && isDirectionLeft)
-				PlayLegsAnimation(legsAnimator , "OnWalkLeft" , true);
-			else
-			{
-				if(-25 <= direction.GetDirectionAngle && direction.GetDirectionAngle <= 25)
-					PlayLegsAnimation(legsAnimator , "OnWalkRight" , moveVector.x > 0);
-				if(25 < direction.GetDirectionAngle && direction.GetDirectionAngle <= 155)
-					PlayLegsAnimation(legsAnimator , "OnWalkBack" , isUpMoving);
-				if(155 < direction.GetDirectionAngle && direction.GetDirectionAngle <= 180 || -180 <= direction.GetDirectionAngle && direction.GetDirectionAngle < -155)
-					PlayLegsAnimation(legsAnimator , "OnWalkLeft" , moveVector.x < 0);
-				if(-155 <= direction.GetDirectionAngle && direction.GetDirectionAngle < -25)
-					PlayLegsAnimation(legsAnimator , "OnWalkFront" , moveVector.y < 0);
-			}
-		}
-		else
+		if(isMoving(moveVector))
+        {
+            SetMovingAndDirectionConditions(moveVector, direction);
+            legsAnimator.enabled = true;
+            AnimateBasedOnMovingInOneDirection(moveVector, legsAnimator, direction);
+        }
+        else
 			legsAnimator.enabled = false;
 	}
+
+    private void AnimateBasedOnMovingInOneDirection(Vector2 moveVector, Animator legsAnimator, Direction direction)
+    {
+        if (isUpMoving && isDirectionUp)
+            PlayLegsAnimation(legsAnimator, "OnWalkBack", true);
+        else if (isUpMoving && isDirectionDown)
+            PlayLegsAnimation(legsAnimator, "OnWalkFront", false);
+        else if (isDownMoving && isDirectionUp)
+            PlayLegsAnimation(legsAnimator, "OnWalkBack", false);
+        else if (isDownMoving && isDirectionDown)
+            PlayLegsAnimation(legsAnimator, "OnWalkFront", true); ////////// horizontal :
+        else if (isRightMoving && isDirectionRight)
+            PlayLegsAnimation(legsAnimator, "OnWalkRight", true);
+        else if (isRightMoving && isDirectionLeft)
+            PlayLegsAnimation(legsAnimator, "OnWalkLeft", false);
+        else if (isLeftMoving && isDirectionRight)
+            PlayLegsAnimation(legsAnimator, "OnWalkRight", false);
+        else if (isLeftMoving && isDirectionLeft)
+            PlayLegsAnimation(legsAnimator, "OnWalkLeft", true);
+        else
+            AnimateBasedOnCursorDirection(moveVector, legsAnimator, direction);
+    }
+
+    private void AnimateBasedOnCursorDirection(Vector2 moveVector, Animator legsAnimator, Direction direction)
+    {
+        if (-25 <= direction.GetDirectionAngle && direction.GetDirectionAngle <= 25)
+            PlayLegsAnimation(legsAnimator, "OnWalkRight", moveVector.x > 0);
+        if (25 < direction.GetDirectionAngle && direction.GetDirectionAngle <= 155)
+            PlayLegsAnimation(legsAnimator, "OnWalkBack", moveVector.y > 0);
+        if (155 < direction.GetDirectionAngle && direction.GetDirectionAngle <= 180 || -180 <= direction.GetDirectionAngle && direction.GetDirectionAngle < -155)
+            PlayLegsAnimation(legsAnimator, "OnWalkLeft", moveVector.x < 0);
+        if (-155 <= direction.GetDirectionAngle && direction.GetDirectionAngle < -25)
+            PlayLegsAnimation(legsAnimator, "OnWalkFront", moveVector.y < 0);
+    }
 
     void PlayLegsAnimation(Animator legsAnimator , string triggerName , bool isForwardAnimation)
 	{
