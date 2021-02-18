@@ -12,7 +12,7 @@ public abstract class HeadState
 
     // Methods
     public abstract void UpdateSoldier();
-    protected void InitializeSprites(SoldierSprite soldierSprite)
+    protected void InitializeSprites()
     {
         headSpriteList = new Sprite[endIndexOfSprites - startIndexOfSprites + 1];
         for(int spriteIndex = startIndexOfSprites; spriteIndex <= endIndexOfSprites; spriteIndex++)

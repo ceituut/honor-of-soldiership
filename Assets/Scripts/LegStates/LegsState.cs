@@ -11,7 +11,7 @@ public abstract class LegsState
 
     // Methods
     public abstract void UpdateSoldier();
-    protected void InitializeSprites(SoldierSprite soldierSprite)
+    protected void InitializeSprites()
     {
         legsSpriteList = new Sprite[endIndexOfSprites - startIndexOfSprites + 1];
         for(int spriteIndex = startIndexOfSprites; spriteIndex <= endIndexOfSprites; spriteIndex++)

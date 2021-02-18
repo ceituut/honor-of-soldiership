@@ -38,10 +38,10 @@ public class SoldierSprite : MonoBehaviour {
     }
 
     // Methods
-    void Awake () {
-        headState = new HeadIdle(this);
-        bodyState = new BodyIdle(this);
-        legsState = new LegsIdle(this);
+    void Start () {
+        headState = new HeadIdle();
+        bodyState = new BodyIdle();
+        legsState = new LegsIdle();
 	}
 
 	void Update () {

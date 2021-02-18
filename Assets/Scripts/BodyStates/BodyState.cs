@@ -11,7 +11,7 @@ public abstract class BodyState
 
     // Methods
     public abstract void UpdateSoldier();
-    protected void InitializeSprites(SoldierSprite soldierSprite)
+    protected void InitializeSprites()
     {
         bodySpriteList = new Sprite[endIndexOfSprites - startIndexOfSprites + 1];
         for(int spriteIndex = startIndexOfSprites; spriteIndex <= endIndexOfSprites; spriteIndex++)

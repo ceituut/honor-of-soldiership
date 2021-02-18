@@ -1,9 +1,9 @@
 public class LegsIdle : LegsState
 {
     // Constructor
-    public LegsIdle(SoldierSprite soldierSprite)
+    public LegsIdle()
     {
-        this.InitializeSprites(soldierSprite);
+        this.InitializeSprites();
     }
 
     // Properties

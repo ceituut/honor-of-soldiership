@@ -1,9 +1,9 @@
 public class BodyReady : BodyState
 {
     // Constructor
-    public BodyReady(SoldierSprite soldierSprite)
+    public BodyReady()
     {
-        InitializeSprites(soldierSprite);
+        InitializeSprites();
     }
 
     // Properties

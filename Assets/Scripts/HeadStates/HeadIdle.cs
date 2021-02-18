@@ -1,9 +1,9 @@
 public class HeadIdle : HeadState
 {
     // Constructor
-    public HeadIdle(SoldierSprite soldierSprite)
+    public HeadIdle()
     {
-        this.InitializeSprites(soldierSprite);
+        this.InitializeSprites();
     }
 
     // Properties
