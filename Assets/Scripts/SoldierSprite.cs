@@ -38,10 +38,18 @@ public class SoldierSprite : MonoBehaviour {
     }
 
     // Methods
+    public static void InitilizeStates()
+    {
+        HeadState.InitializeHeadList();
+        BodyState.InitializeBodyList();
+        LegsState.InitializelegsList();
+    }
+
     void Start () {
-        headState = new HeadIdle();
-        bodyState = new BodyIdle();
-        legsState = new LegsIdle();
+        SoldierSprite.InitilizeStates();
+        headState = HeadState.headList["Head-Idle"];
+        bodyState = BodyState.bodyList["Body-Idle"];
+        legsState = LegsState.legsList["Legs-Idle"];
 	}
 
 	void Update () {

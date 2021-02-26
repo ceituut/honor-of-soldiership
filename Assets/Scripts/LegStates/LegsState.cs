@@ -1,7 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Linq;
 using UnityEngine;
+
 public abstract class LegsState
 {
     // Fields
+    public static Dictionary<string,LegsState> legsList;
     private static readonly int startIndexOfSprites = 1;
     private static readonly int endIndexOfSprites = 181;
     protected Sprite[] legsSpriteList;
@@ -10,6 +16,16 @@ public abstract class LegsState
     public abstract string StateName { get;}
 
     // Methods
+    public static void InitializelegsList()
+    {
+        var legsTypes = Assembly.GetAssembly(typeof(LegsState)).GetTypes().Where(thisLegsState => typeof(LegsState).IsAssignableFrom(thisLegsState) && thisLegsState.IsAbstract == false);
+        legsList = new Dictionary<string, LegsState>();
+        foreach(var thisLegsType in legsTypes)
+        {
+            LegsState newLegsState = System.Activator.CreateInstance(thisLegsType) as LegsState;
+            legsList.Add(newLegsState.StateName,newLegsState);
+        }
+    }
     public abstract void UpdateSoldier();
     protected void InitializeSprites()
     {

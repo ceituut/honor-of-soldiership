@@ -1,8 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Linq;
 using UnityEngine;
 
 public abstract class HeadState
 {
     // Fields
+    public static Dictionary<string,HeadState> headList;
     private static readonly int startIndexOfSprites = 1;
     private static readonly int endIndexOfSprites = 181;
     protected Sprite[] headSpriteList;
@@ -11,6 +16,16 @@ public abstract class HeadState
     public abstract string StateName { get;}
 
     // Methods
+    public static void InitializeHeadList()
+    {
+        var headTypes = Assembly.GetAssembly(typeof(HeadState)).GetTypes().Where(thisHeadState => typeof(HeadState).IsAssignableFrom(thisHeadState) && thisHeadState.IsAbstract == false);
+        headList = new Dictionary<string, HeadState>();
+        foreach(var thisHeadType in headTypes)
+        {
+            HeadState newHeadState = System.Activator.CreateInstance(thisHeadType) as HeadState;
+            headList.Add(newHeadState.StateName,newHeadState);
+        }
+    }
     public abstract void UpdateSoldier();
     protected void InitializeSprites()
     {
