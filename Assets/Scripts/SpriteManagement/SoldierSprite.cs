@@ -32,11 +32,6 @@ public class SoldierSprite : MonoBehaviour {
         set { legsSpriteRenderer = value;}
     }
 
-    public SpriteManager GetSpriteManager
-    {
-        get { return spriteManager; }
-    }
-
     // Methods
     public static void InitilizeStates()
     {
@@ -45,14 +40,21 @@ public class SoldierSprite : MonoBehaviour {
         LegsState.InitializelegsList();
     }
 
-    void Start () {
+    void Start ()
+    {
         SoldierSprite.InitilizeStates();
+        SetIdelStates();
+        Fire.OnFire += OnFireChangeSprite;
+    }
+
+    private void SetIdelStates()
+    {
         headState = HeadState.headList["Head-Idle"];
         bodyState = BodyState.bodyList["Body-Idle"];
         legsState = LegsState.legsList["Legs-Idle"];
-	}
+    }
 
-	void Update () {
+    void Update () {
 		ChangeSprite(direction.GetAngle);
 	}
 
@@ -62,4 +64,18 @@ public class SoldierSprite : MonoBehaviour {
         headState.ChangeSprite(directionAngle , this);
         legsState.ChangeSprite(directionAngle , this);
 	}
+
+    void OnFireChangeSprite()
+    {
+        headState = HeadState.headList["Head-Ready"];
+        bodyState = BodyState.bodyList["Body-Ready"];
+        StopCoroutine("AfterFireChangeSprite");
+        StartCoroutine("AfterFireChangeSprite");
+    }
+
+    IEnumerator AfterFireChangeSprite()
+    {
+        yield return new WaitForSeconds(2.5f);
+        SetIdelStates();
+    }
 }

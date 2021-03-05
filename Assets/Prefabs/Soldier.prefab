@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114553348478138690}
   - component: {fileID: 114321619806387914}
   - component: {fileID: 114589413638989834}
+  - component: {fileID: 114800944266725138}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
@@ -75,7 +76,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -338,6 +339,19 @@ MonoBehaviour:
   rigidBody: {fileID: 50308351469771064}
   legsAnimator: {fileID: 95859328628501898}
   direction: {fileID: 114553348478138690}
+--- !u!114 &114800944266725138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1073298466093318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d4674217afc4d65ada6d20d6fad08a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 1537736772108240, guid: a21bb04f3387d4cb387b5ec22c768af3, type: 2}
+  fireRate: 10
 --- !u!124 &124510965451130052
 Behaviour:
   m_ObjectHideFlags: 1
