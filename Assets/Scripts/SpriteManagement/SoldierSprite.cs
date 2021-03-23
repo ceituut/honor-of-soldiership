@@ -17,23 +17,20 @@ public class SoldierSprite : MonoBehaviour {
     // Properties
     public SpriteRenderer HeadSpriteRenderer {
         get { return headSpriteRenderer; }
-        set { headSpriteRenderer = value;}
     }
 
     public SpriteRenderer BodySpriteRenderer
     {
         get { return bodySpriteRenderer; }
-        set { bodySpriteRenderer = value; }
     }
 
     public SpriteRenderer LegsSpriteRenderer
     {
         get { return legsSpriteRenderer; }
-        set { legsSpriteRenderer = value;}
     }
 
     // Methods
-    public static void InitilizeStates()
+    static void InitilizeStates()
     {
         HeadState.InitializeHeadList();
         BodyState.InitializeBodyList();
@@ -47,7 +44,7 @@ public class SoldierSprite : MonoBehaviour {
         Fire.OnFire += OnFireChangeSprite;
     }
 
-    private void SetIdelStates()
+    void SetIdelStates()
     {
         headState = HeadState.headList["Head-Idle"];
         bodyState = BodyState.bodyList["Body-Idle"];

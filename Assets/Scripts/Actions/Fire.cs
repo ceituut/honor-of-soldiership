@@ -7,11 +7,20 @@ public class Fire : MonoBehaviour {
 	// Fields
 	public static event Action OnFire;
 	[SerializeField] private GameObject bullet;
+	[SerializeField] private FirePositionContainer firePositionContainer;
 	private SpriteRenderer bulletSpriteRenderer;
 	private Direction direction;
 	private bool isFired;
 	private int soldierSpriteInitialSortingOrder;
 	[SerializeField] private float fireRate;
+
+	// Properties
+	private Vector2 GetFirePosition { 
+		get {
+			int angle = direction.GetAngle;
+			return firePositionContainer.GetPosition(angle) + transform.position; 
+		} 
+	}
 
 	// Methods
 	void Awake()
@@ -33,8 +42,9 @@ public class Fire : MonoBehaviour {
 
 	void FireBasedOnDirection()
 	{
-		GameObject curretnBullet = GameObject.Instantiate(bullet , transform.position , Quaternion.identity) as GameObject;
-		Vector2 bulletVelocity = Quaternion.Euler(0, 0, direction.GetAngle) * Vector2.right;
+		GameObject curretnBullet = GameObject.Instantiate(bullet , GetFirePosition , Quaternion.identity) as GameObject;
+		curretnBullet.transform.SetParent(transform);
+		Vector2 bulletVelocity = Quaternion.Euler(0, 0, direction.GetAngle) * curretnBullet.transform.right;
 		curretnBullet.GetComponent<Rigidbody2D>().velocity = bulletVelocity * fireRate;
 		SetBulletSpriteOrder();
 		if(OnFire != null)
