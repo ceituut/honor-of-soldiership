@@ -11706,7 +11706,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 896132661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.27, y: -0.742, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2022468495}
@@ -11728,7 +11728,7 @@ MonoBehaviour:
   bodySpriteContainer: {fileID: 885592250}
   firePositionContainer: {fileID: 11400000, guid: 8b52a25551c3040b99ebf3718084d2d6,
     type: 2}
-  angle: 180
+  angle: 179
 --- !u!212 &896132664
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11763,7 +11763,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 23
+  m_SortingOrder: -11
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -25776,7 +25776,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 271bcdcf4870f4519bd10916783e6ca0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 224f47d0e24bc4e8e87b9bfd9cf77c9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
