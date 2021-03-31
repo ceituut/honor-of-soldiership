@@ -9,9 +9,10 @@ public class Fire : MonoBehaviour {
 	[SerializeField] private GameObject bullet;
 	[SerializeField] private FirePositionContainer firePositionContainer;
 	private SpriteRenderer bulletSpriteRenderer;
+	private List<GameObject> bulletPoolList;
 	private Direction direction;
-	private bool isFired;
-	private int soldierSpriteInitialSortingOrder;
+	private bool isFired, isBulletReachedTarget;
+	private int soldierSpriteInitialSortingOrder, maxNumberOfBullets;
 	[SerializeField] private float fireRate;
 
 	// Properties
@@ -28,6 +29,7 @@ public class Fire : MonoBehaviour {
 		direction = GetComponent<Direction>();
 		soldierSpriteInitialSortingOrder = GetComponent<SoldierSprite>().HeadSpriteRenderer.sortingOrder;
 		bulletSpriteRenderer = bullet.GetComponent<SpriteRenderer>();
+		bulletPoolList = new List<GameObject>();
 	}
 	
 	void Update () {
