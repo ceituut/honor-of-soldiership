@@ -7,7 +7,6 @@ public class SpriteManager : singleton<SpriteManager> {
     // Fields
 	public SpriteAtlas spriteAtlas;
 
-
     // Methods
     protected override void Awake()
     {

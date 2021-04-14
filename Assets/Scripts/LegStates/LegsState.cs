@@ -26,13 +26,16 @@ public abstract class LegsState
             legsList.Add(newLegsState.StateName,newLegsState);
         }
     }
+
     public abstract void UpdateSoldier();
+
     protected void InitializeSprites()
     {
         legsSpriteList = new Sprite[endIndexOfSprites - startIndexOfSprites + 1];
         for(int spriteIndex = startIndexOfSprites; spriteIndex <= endIndexOfSprites; spriteIndex++)
             legsSpriteList[spriteIndex - 1] = SpriteManager.Instance.spriteAtlas.GetSprite(StateName + spriteIndex);
     }
+    
     public void ChangeSprite(int directionAngle , SoldierSprite soldierSprite)
     {
         int spriteIndex = 0; 

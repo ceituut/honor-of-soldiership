@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// [CreateAssetMenu(fileName = "FirePositionContainer", 
-// menuName = "Assets/HOS/FirePositionContainer", order = 0)]
+[CreateAssetMenu(fileName = "FirePositionContainer", 
+menuName = "Assets/HOS/FirePositionContainer", order = 0)]
 public class FirePositionContainer : ScriptableObject {
     // Fields
     [SerializeField] private List<Vector3> firePositions;

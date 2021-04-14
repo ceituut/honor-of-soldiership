@@ -26,13 +26,16 @@ public abstract class HeadState
             headList.Add(newHeadState.StateName,newHeadState);
         }
     }
+
     public abstract void UpdateSoldier();
+
     protected void InitializeSprites()
     {
         headSpriteList = new Sprite[endIndexOfSprites - startIndexOfSprites + 1];
         for(int spriteIndex = startIndexOfSprites; spriteIndex <= endIndexOfSprites; spriteIndex++)
             headSpriteList[spriteIndex - 1] = SpriteManager.Instance.spriteAtlas.GetSprite(StateName + spriteIndex);
     }
+    
     public void ChangeSprite(int directionAngle , SoldierSprite soldierSprite)
     {
         int spriteIndex = 0; 

@@ -11,6 +11,7 @@ public class SortSprite : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         soldierSpriteInitialSortingOrder = soldierSprite.HeadSpriteRenderer.sortingOrder;
     }
+    
     private void Update() {
         float distance = transform.position.y - offset - soldierBottomTransform.position.y;
         if(distance < 0)

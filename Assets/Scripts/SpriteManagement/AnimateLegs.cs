@@ -27,6 +27,7 @@ public class AnimateLegs {
 	{
 		return moveVector.normalized.magnitude != 0;
 	}
+
 	void SetMovingAndDirectionConditions(Vector2 moveVector , Direction direction)
 	{
 		float angle = direction.GetAngle;
@@ -39,6 +40,7 @@ public class AnimateLegs {
 		isDirectionRight = -90 <= angle && angle <= 90;
 		isDirectionLeft = (90 <= angle && angle <= 180) || (-180 <= angle && angle <= -90);
 	}
+	
 	public void Animate(Vector2 moveVector , Animator legsAnimator , Direction direction)
 	{
 		if(isMoving(moveVector))
