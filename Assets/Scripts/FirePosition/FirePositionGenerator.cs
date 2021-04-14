@@ -4,6 +4,7 @@ using UnityEngine;
 
 #if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class FirePositionGenerator : MonoBehaviour {
 	// Fields
@@ -94,6 +95,7 @@ public class FirePositionGenerator : MonoBehaviour {
             newPosition = new Vector3(firePositionsDic[index].x, firePositionsDic[index].y, firePositionsDic[index].z);
             firePositionContainer.FirePositions.Add(newPosition);
         }
+        EditorUtility.SetDirty(firePositionContainer);
     }
 
     public void LoadData()
@@ -112,7 +114,7 @@ public class FirePositionGenerator : MonoBehaviour {
 
 
 
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(FirePositionGenerator))]
 public class FirePositionGeneratorEditor : Editor {
     // Fields
