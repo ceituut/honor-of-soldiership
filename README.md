@@ -3,7 +3,7 @@
 ![HonorOfSoldiership Image](https://github.com/amirihusayn/HonorOfSoldiership/blob/main/Assets/Sprites/Screen.jpg)
 
 ## Project Idea
-When I was not familiar with 3D games and 3D modeling , I decided to make a 3D game in 2D world ! In result I made a 2D soldier character that can turn with mouse. If you interested in the idea , feel free to use this project.
+When I was not familiar with 3D games and 3D modeling , I decided to make a 3D game character in 2D world ! In result I made a 2D soldier character that can turn with mouse. If you interested in the idea , contribute !
 I still eager to work on turning 2D sprites like 3D. But now it would be time saving to use 3D assets.
 
 ## Contributing
