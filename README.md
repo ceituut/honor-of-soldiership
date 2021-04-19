@@ -1,8 +1,8 @@
-# HonorOfSoldiership
+# HonorOfSoldiership  
+[![HonorOfSoldiership](https://github.com/amirihusayn/HonorOfSoldiership/blob/main/Assets/Sprites/Screen.jpg)](https://youtu.be/C8ORI2uycVc)
+Watch Gameplay video !
 
-![HonorOfSoldiership Image](https://github.com/amirihusayn/HonorOfSoldiership/blob/main/Assets/Sprites/Screen.jpg)
-
-Unity version : + 2018.2.7 
+#### Unity version : + 2018.2.7 
 
 ## Project Idea
 When I was not familiar with 3D games and 3D modeling , I decided to make a 3D game character in 2D world ! In result I made a 2D soldier character that can turn with mouse. If you interested in the idea , contribute !
