@@ -2,7 +2,13 @@
 [![HonorOfSoldiership](https://github.com/amirihusayn/HonorOfSoldiership/blob/main/Assets/Sprites/Screen.jpg)](https://youtu.be/C8ORI2uycVc)
 Watch Gameplay video !
 
-#### Unity version : + 2018.2.7 
+
+[![Unity 2018.2.7](https://img.shields.io/badge/unity-2018.4.36.f1-green.svg)](https://unity3d.com/get-unity/download)
+[![GitHub stars](https://badgen.net/github/stars/amirihusayn/HonorOfSoldiership)](https://GitHub.com/amirihusayn/HonorOfSoldiership/stargazers/)
+[![GitHub contributors](https://badgen.net/github/contributors/amirihusayn/HonorOfSoldiership)](https://GitHub.com/amirihusayn/HonorOfSoldiership/graphs/contributors/)
+[![GitHub forks](https://badgen.net/github/forks/amirihusayn/HonorOfSoldiership/)](https://GitHub.com/amirihusayn/HonorOfSoldiership/network/)
+[![GitHub issues](https://img.shields.io/github/issues/amirihusayn/HonorOfSoldiership.svg)](https://GitHub.com/amirihusayn/HonorOfSoldiership/issues/)
+[![GitHub license](https://img.shields.io/github/license/amirihusayn/HonorOfSoldiership)](https://github.com/amirihusayn/HonorOfSoldiership)
 
 ## Project Idea
 When I was not familiar with 3D games and 3D modeling , I decided to make a 3D game character in 2D world ! In result I made a 2D soldier character that can turn with mouse. If you interested in the idea , contribute !
