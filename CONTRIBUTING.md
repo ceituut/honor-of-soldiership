@@ -22,16 +22,16 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 6. Issue that pull request!
 
 ## Any contributions you make will be under the MIT Software License
-In short, when you submit code changes, your submissions are understood to be under the same [MIT License](https://github.com/amirihusayn/HonorOfSoldiership/blob/main/LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
+In short, when you submit code changes, your submissions are understood to be under the same [MIT License](LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-## Report bugs using Github's [issues](https://github.com/amirihusayn/HonorOfSoldiership/issues)
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/amirihusayn/HonorOfSoldiership/issues/new/choose); it's that easy!
+## Report bugs using Github's [issues](https://github.com/ceituut/honor-of-soldiership/issues)
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/ceituut/honor-of-soldiership/issues/new/choose); it's that easy!
 
 ## Write bug reports with detail, background, and sample code
-Check out ![bug report](https://github.com/amirihusayn/HonorOfSoldiership/blob/main/.github/ISSUE_TEMPLATE/bug_report.md) and ![feature request](https://github.com/amirihusayn/HonorOfSoldiership/blob/main/.github/ISSUE_TEMPLATE/feature_request.md) templates.
+Check out ![bug report](.github/ISSUE_TEMPLATE/bug_report.md) and ![feature request](.github/ISSUE_TEMPLATE/feature_request.md) templates.
 
 ## Code of conduct
-We use ![this code of conduct](https://github.com/amirihusayn/HonorOfSoldiership/blob/main/CODE_OF_CONDUCT.md). 
+We use ![this code of conduct](CODE_OF_CONDUCT.md). 
 
 ## License
 By contributing, you agree that your contributions will be licensed under its MIT License.
