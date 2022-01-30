@@ -5,7 +5,7 @@ Watch Gameplay video !
 
 [![Unity 2018.2.7](https://img.shields.io/badge/unity-2018.4.36.f1-green.svg)](https://unity3d.com/get-unity/download)
 [![GitHub stars](https://badgen.net/github/stars/ceituut/honor-of-soldiership)](https://GitHub.com/ceituut/honor-of-soldiership/stargazers/)
-[![GitHub contributors](https://badgen.net/github/contributors/amirihusayn/HonorOfSoldiership)](https://GitHub.com/ceituut/honor-of-soldiership/graphs/contributors/)
+[![GitHub contributors](https://badgen.net/github/contributors/ceituut/honor-of-soldiership)](https://GitHub.com/ceituut/honor-of-soldiership/graphs/contributors/)
 [![GitHub forks](https://badgen.net/github/forks/ceituut/honor-of-soldiership/)](https://GitHub.com/ceituut/honor-of-soldiership/network/)
 [![GitHub issues](https://img.shields.io/github/issues/ceituut/honor-of-soldiership.svg)](https://GitHub.com/ceituut/honor-of-soldiership/issues/)
 [![GitHub license](https://img.shields.io/github/license/ceituut/honor-of-soldiership)](https://github.com/ceituut/honor-of-soldiership)
